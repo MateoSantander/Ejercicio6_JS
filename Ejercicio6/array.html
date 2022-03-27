@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag_array</title>
+    <link rel="stylesheet" href="CSS/array.css">
+    <script>
+        var array = [1,2,3,4,5];
+        
+        function introducirNum(){
+            let num = parseInt(campoNum.value)
+            if(num<=0 || num>0){
+                array.push(num)
+                campoArray.value = array
+            }
+        }
+
+        function eliminarNum(){
+            let aleatorio = Math.floor(Math.random() * (array.length))
+            campoAleatorio.value = array[aleatorio]
+            const index = array.indexOf(array[aleatorio])
+            array.splice(index,1)
+        }
+
+        function mostrarArrayAct(){
+            campoArray.value = array;
+        }
+
+    </script>
+</head>
+<body onload="mostrarArrayAct()">
+    <header>
+        <h1>Modificación de un Array de números</h1>
+    </header>
+    <br/><br/>
+    <h2>Números en el array: <input id="campoArray" type="text"/></h2>
+    <br/>
+    <h2>Añadir número: <input id="campoNum" type="numero" placeholder="Introducir número"/></h2>
+    <button class="meterNum" onclick="introducirNum()">Introducir</button> </button>
+    <br/><br/>
+
+    <h2>Número aleatorio eliminado: <input id="campoAleatorio" type="text" /></h2>
+    <button onclick="eliminarNum(),mostrarArrayAct()">Eliminar número</button>
+    <br/><br/><br/>
+    <a href="index.html"><button id="inicio">Volver a Inicio</button></a>
+    <a href="calculadora.html"><button id="array">Ir a Herramienta Calculadora</button></a>
+</body>
+</html>

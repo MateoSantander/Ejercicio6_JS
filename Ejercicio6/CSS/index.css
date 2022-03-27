@@ -1,0 +1,23 @@
+header>h1{
+       
+    color:rgb(83, 126, 141);
+    text-align:center;
+    border-radius: 5px;
+       background-color:white;
+}
+
+nav>a{
+	text-align:center;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding: 8px;
+    background-color:white;
+    display: inline-block;
+    text-decoration: none;
+    color:rgb(83, 126, 141);
+}
+
+body{
+    text-align: center;
+    background-color:aqua;
+}

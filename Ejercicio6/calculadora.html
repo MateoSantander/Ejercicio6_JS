@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/calculadora.css">
+    <title>pag_calculadora</title>
+    <script>
+    function Suma() {
+        let s1 = parseInt(n1.value)
+        let s2 = parseInt(n2.value)
+        resultado.value = s1+s2
+
+    }
+    function Resta() {
+        let r1 = parseInt(n1.value)
+        let r2 = parseInt(n2.value)
+        resultado.value = r1-r2
+
+    }
+    function Multiplicacion() {
+        let m1 = parseInt(n1.value)
+        let m2 = parseInt(n2.value)
+        resultado.value = m1*m2
+
+    }
+    function Division() {
+        let d1 = parseInt(n1.value)
+        let d2 = parseInt(n2.value)
+        resultado.value = d1/d2
+
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Calculadora sencilla</h1>
+    </header>
+    <article>
+        <input id="n1" type="numero" placeholder="Primer numero" /> <br />
+        <input id="n2" type="numero" placeholder="Segundo numero" /> <br /><br />
+        <button onclick="Suma()">Suma</button> 
+        <button onclick="Resta()">Resta</button> 
+        <button onclick="Multiplicacion()">Multiplicacion</button>
+        <button onclick="Division()">Division</button> <br /><br />
+        <b>RESULTADO:</b><input id="resultado" type="numero"> <br /><br />
+        <a href="index.html"><button id="inicio">Volver a Inicio</button></a>
+        <a href="array.html"><button id="array">Ir a Herramienta Array</button></a>
+    </article>
+</body>
+</html>
